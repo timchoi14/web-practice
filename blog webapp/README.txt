@@ -2,6 +2,11 @@ Blog webapp(INCOMPLETE)
 
 This folder is a practice project of creating an online blogging website where users can create, edit, and delete post.
 
+to download the packages:
+in the terminal write npm init -y
+then npm install "the packages below (without the quotes)"
+
+
 consisting packages
 express
 body-parser
