@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+<div class="v">
+    <div class="container create" style="background-color: #202020; color:aliceblue; margin-top: 20px;">
+        <h1>Create Post</h1>
+        <form action="/submit" method="POST">
+            <label for="title">Title</label><br>
+            <input type="text" id="title"  placeholder="Enter Title" style="width: 99.5%; color: aliceblue;" name="title" autofocus required><br>
+            <label for="posttext">Body</label><br>
+            <textarea name="body" required></textarea><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</div>
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+<div class="v">
+    <div class="container create" style="background-color: #202020; color:aliceblue; margin-top: 20px;">
+        
+        <%if(locals.ti.length > 0 && locals.con.length > 0){%>
+            <h1><%= locals.ti%></h1>
+            <p><%= locals.con%></p>
+        <%}%>
+    </div>
+</div>
+<%- include("partials/footer.ejs") %>
