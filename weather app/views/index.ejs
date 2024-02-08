@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="/styles/styles.css">
+        <title>Weather App</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="container">
+            <div id="searchbar">
+                <form id="location" method="post" action="/weather">
+                <input type="text" id="cityInput"  name="city" placeholder="Search City...">
+                </form>
+            </div>
+            <div class="information">
+                <!---->
+                <%if(locals.c) {%>
+                    <div id="city"><%=c%> <%= temp%>°F</div>
+                    <img id="pic" src=<%=p%>>
+                    <div id="hilow">
+                        <div id="wt"><%=wt%> </div>
+                        <%= hi["Maximum"].Value + "°F"%> / <%= hi["Minimum"].Value + "°F"%>
+                    </div>
+                    <div id="aqi">
+                        AQI
+                        <div id="progress">
+                            <div id="value">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="uv">
+                        UV Index
+                        <br>
+                        low
+                    </div>
+                    <div id="wind">
+                        Wind
+                        <br>
+                        18mph
+                    </div>
+                    <div id="humidity">
+                        Humidity
+                        <br>
+                        57%
+                    </div>
+                <%} else {%>
+                    <div id="none">No Information</div>
+                <%}%>
+            </div>
+        </div>
+    </body>
+</html>
