@@ -97,11 +97,10 @@ body{
     border-radius: 15px; 
 } 
 
-#value{
-    background-color: rgb(57, 189, 17); 
-    padding: 1%; 
+#value {
+    padding: 1%;
     border-radius: 15px;
-    width: 16%
+    font-size: 0%;
 }
 
 #none{

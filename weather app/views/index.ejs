@@ -16,37 +16,61 @@
                 <!---->
                 <%if(locals.c) {%>
                     <div id="city"><%=c%> <%= temp%>°F</div>
-                    <img id="pic" src=<%=p%>>
+                    <img id="pic" src=<%=p%> alt="weather icon">
                     <div id="hilow">
                         <div id="wt"><%=wt%> </div>
                         <%= hi["Maximum"].Value + "°F"%> / <%= hi["Minimum"].Value + "°F"%>
                     </div>
                     <div id="aqi">
-                        AQI
+                        Air Quality Index
                         <div id="progress">
                             <div id="value">
+                                <%= aqi%>
                             </div>
                         </div>
                     </div>
                     <div id="uv">
                         UV Index
                         <br>
-                        low
+                        <%= uv%>
                     </div>
                     <div id="wind">
                         Wind
                         <br>
-                        18mph
+                        <%=wind%>mph
                     </div>
                     <div id="humidity">
                         Humidity
                         <br>
-                        57%
+                        <%=hum%>%
                     </div>
                 <%} else {%>
                     <div id="none">No Information</div>
                 <%}%>
             </div>
         </div>
+        <script>
+            if(document.getElementById("value").innerHTML < 30){
+                document.getElementById("value").style.backgroundColor = "#209c05";
+                document.getElementById("value").style.width = (parseInt(document.getElementById("value").innerText, 10)/3)+"%";
+            }
+            else if(document.getElementById("value").innerHTML < 50) {
+                document.getElementById("value").style.backgroundColor = "#85e62c";
+                document.getElementById("value").style.width = (parseInt(document.getElementById("value").innerText, 10)/3)+"%";
+            }
+            else if(document.getElementById("value").innerHTML < 70)  {
+                document.getElementById("value").style.backgroundColor = "#ebff0a";
+                document.getElementById("value").style.width = (parseInt(document.getElementById("value").innerText, 10)/3)+"%";
+            }
+            else if(document.getElementById("value").innerHTML < 90)  {
+                document.getElementById("value").style.backgroundColor =  "#f2ce02";
+                document.getElementById("value").style.width = (parseInt(document.getElementById("value").innerText, 10)/3)+"%";
+            }
+            else {
+                document.getElementById("value").style.backgroundColor = "#ff0a0a";
+                document.getElementById("value").style.width = (parseInt(document.getElementById("value").innerText, 10)/3)+"%";
+            }
+            
+        </script>
     </body>
 </html>
