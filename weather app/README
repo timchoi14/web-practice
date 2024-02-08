@@ -1,0 +1,9 @@
+Open Terminal and type:
+npm init
+then either using nodemon or default type:
+nodemon index.js 
+  or
+node index.js
+
+Should run the program and allow you to interact with the website
+calls might not happen due to having only 50 calls to the api per day.
